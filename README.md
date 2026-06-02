@@ -1,27 +1,13 @@
-#!/usr/bin/env python3
-import time
-import sys
+# E-Commerce User Retention & Churn Analysis
 
-def prank_countdown(seconds):
-    """Display a fake countdown warning of a system meltdown."""
-    for sec in range(seconds, 0, -1):
-        # The \r carriage return brings the cursor to the start of the line.
-        sys.stdout.write(f"\rWARNING: System meltdown in {sec} seconds...")
-        sys.stdout.flush()
-        time.sleep(1)
-    # Erase the warning and display the prank message.
-    sys.stdout.write("\rAPRIL FOOLS! Your system is completely safe.      \n")
-    sys.stdout.flush()
+## 📌 Project Overview
+An analysis of 100,000+ user transaction logs to calculate Month-over-Month (MoM) retention rates and pinpoint exactly when users drop off in the customer lifecycle.
 
-def main():
-    print("Initializing system check...\n")
-    time.sleep(2)  # Pause for dramatic effect.
-    
-    # Start the fake countdown (e.g., countdown from 10 seconds)
-    prank_countdown(10)
-    
-    time.sleep(1)
-    print("\nHappy April Fools' Day!\nEnjoy the joke.\n")
+## 🛠️ Tech Stack
+* Python (Pandas, NumPy)
+* Visualization (Seaborn, Matplotlib)
 
-if __name__ == "__main__":
-    main()
+## 📈 Key Insights Found
+* **The Cliff:** 45% of users churn within the first 30 days of signing up.
+* **The Stabilization:** If a user remains active past Month 3, their retention rate stabilizes at 80%.
+* **Recommendation:** The product team should focus marketing efforts heavily on user onboarding during the first 3 weeks to flatten the initial churn cliff.
